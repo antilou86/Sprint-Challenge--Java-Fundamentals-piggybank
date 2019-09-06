@@ -2,6 +2,7 @@ package piggy-bank;
 import java.text.DecimalFormat;
 
 public class PiggyBank {
+
     //declares empty coin/dollar variables for me to work with
     private Quarter myQuarter;
     private Dollar myDollar;
@@ -31,15 +32,15 @@ public class PiggyBank {
     }
 
     //gets current total and converts to dollar amount.
-    private double total(){
+    }private double total(){
         double total=0;
-        total+=(myQuarter.getTotal()/100.0);
-        total+=(myDollar.getTotal()/100.0);
-        total+=(myDime.getTotal()/100.0);
-        total+=(myPenny.getTotal()/100.0);
-        total+=(myNickel.getTotal()/100.0);
+        total+=(myQuarter.getTotal());
+        total+=(myDollar.getTotal());
+        total+=(myDime.getTotal());
+        total+=(myPenny.getTotal());
+        total+=(myNickel.getTotal());
         return total;
-    }
+
     //checks how much of each coin exists in the bank and prints it to console.
     public void contents(){
         if(myDollar.getContent()>0)
@@ -54,9 +55,9 @@ public class PiggyBank {
             System.out.println(myPenny);
     }
 
-    //tries to remove an amount and checks if the amount can be removed
+    //checks if the amount can be removed and tries to remove an amount
     public void remove(double amount){
-        int temp=(int)(amount*100);
+        int temp=(int)(amount);
         if(amount>total()) {
             System.out.println("You are broke, ask your parents for an allowance.");
         } else {

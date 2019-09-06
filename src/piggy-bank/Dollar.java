@@ -1,18 +1,18 @@
 package piggy-bank;
 
-public class Dollar extends coin {
-    private static int dollar = 100;
+public class Dollar extends Coin {
+    private static double dollar = 1;
     private static int count = 0;
 
     public Dollar {
         count++;
         System.out.println("$1 added for a total of "+ count);
     }
+
     public Dollar(int num){
         count+=num;
         System.out.println("$"+num+" added for a total of "+ count);
     }
-
 
     @Override
     public int getContent() {
@@ -20,19 +20,16 @@ public class Dollar extends coin {
     }
     @Override
     public int getTotal(){
-        return count*100;
+        return count*dollar;
     }
-
     @Override
     public int getValue() {
-        return 100;
+        return dollar;
     }
-
     @Override
     public void remove(int num) {
         count-=num;
     }
-
     @Override
     public String toString() {
         return "$"+count;
