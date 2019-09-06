@@ -1,4 +1,4 @@
-package piggy-bank;
+package piggyBank;
 
     public static class Main {
         public static void main(String[] args) {

@@ -1,16 +1,16 @@
-package piggy-bank;
+package piggyBank;
 
-public class Penny extends Coin {
-    private static double penny = 0.01;
+public class Dime extends Coin {
+    private static double dime = 0.10;
     private static int count = 0;
 
-    public Penny {
+    public Dime {
         count++;
-        System.out.println("1 Penny added for a total of "+ count);
+        System.out.println("1 dime added for a total of "+ count);
     }
-    public Penny(int num){
+    public Dime(int num){
         count+=num;
-        System.out.println(num+" Pennies added for a total of "+ count +" Pennies in the bank");
+        System.out.println(num+" dimes added for a total of "+ count +" dimes in the bank");
     }
 
 
@@ -20,11 +20,11 @@ public class Penny extends Coin {
     }
     @Override
     public int getTotal(){
-        return count*penny;
+        return count*dime;
     }
     @Override
     public int getValue() {
-        return penny;
+        return dime;
     }
     @Override
     public void remove(int num) {
@@ -35,7 +35,7 @@ public class Penny extends Coin {
         if (count == 0) {
             return "";
         } else {
-            return count + (count>1?" Pennies":" Penny");
+            return count + (count>1?" Dimes":" Dime");
         }
     }
 }

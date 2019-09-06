@@ -1,4 +1,4 @@
-package piggy-bank;
+package piggyBank;
 
 public class Dollar extends Coin {
     private static double dollar = 1;

@@ -1,4 +1,4 @@
-package piggy-bank;
+package piggyBank;
 
 public abstract class Coin {
     public abstract int getContent();

@@ -1,18 +1,17 @@
-package piggy-bank;
+package piggyBank;
 
-public class Quarter extends Coin {
-    private static double quarter = 0.25;
+public class Nickle extends Coin {
+    private static double nickle = 0.5;
     private static int count = 0;
 
-    public Quarter {
+    public Nickle {
         count++;
-        System.out.println("$.25 added for a total of "+ count);
+        System.out.println("1 nickle added for a total of "+ count);
     }
-    public Quarter(int num){
+    public Nickle(int num){
         count+=num;
-        System.out.println(num+" quarters added for a total of "+ count +" quarters in the bank");
+        System.out.println(num+" nickles added for a total of "+ count +" nickles in the bank");
     }
-
 
     @Override
     public int getContent() {
@@ -20,11 +19,11 @@ public class Quarter extends Coin {
     }
     @Override
     public int getTotal(){
-        return count*quarter;
+        return count*nickle;
     }
     @Override
     public int getValue() {
-        return quarter;
+        return nickle;
     }
     @Override
     public void remove(int num) {
@@ -35,7 +34,7 @@ public class Quarter extends Coin {
         if (count == 0) {
             return "";
         } else {
-            return count + (count>1?" Quarters":" Quarter");
+            return count + (count>1?" Nickles":" Nickle");
+        }
     }
-}
 }
