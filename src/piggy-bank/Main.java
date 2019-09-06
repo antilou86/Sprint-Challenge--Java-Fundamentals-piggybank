@@ -7,6 +7,7 @@ package piggy-bank;
             //creates the PiggyBank collection.
             PiggyBank piggyBank=new PiggyBank();
 
+            //adds and prints coins/dollars
             piggyBank.add(new Quarter());
             piggyBank.add(new Dime());
             piggyBank.add(new Dollar(5));
@@ -16,9 +17,9 @@ package piggy-bank;
             piggyBank.add(new Penny(10));
 
             //gets total
-            piggyBank.print();
+            piggyBank.printBank();
 
-            //tests removal
+            //tests stretch/removal
             System.out.println("\n*** Removal ***");
             piggyBank.remove(1.50);
         }

@@ -3,14 +3,14 @@ import java.text.DecimalFormat;
 
 public class PiggyBank {
 
-    //declares empty coin/dollar variables for me to work with
+    //declares empty coin/dollar instances for me to work with
     private Quarter myQuarter;
     private Dollar myDollar;
     private Dime myDime;
     private Nickel myNickel;
     private Penny myPenny;
 
-    //adds value based on money type
+    //adds coin/value based on money type
     public void add(Coin added){
         if(added instanceof Quarter){
             myQuarter=(Quarter)added;
