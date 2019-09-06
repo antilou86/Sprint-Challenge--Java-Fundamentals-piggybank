@@ -4,7 +4,7 @@ public class Quarter extends Coin {
     private static double quarter = 0.25;
     private static int count = 0;
 
-    public Quarter {
+    public Quarter() {
         count++;
         System.out.println("$.25 added for a total of "+ count);
     }
@@ -19,15 +19,15 @@ public class Quarter extends Coin {
         return count;
     }
     @Override
-    public int getTotal(){
+    public double getTotal(){
         return count*quarter;
     }
     @Override
-    public int getValue() {
+    public double getValue() {
         return quarter;
     }
     @Override
-    public void remove(int num) {
+    public void remove(double num) {
         count-=num;
     }
     @Override

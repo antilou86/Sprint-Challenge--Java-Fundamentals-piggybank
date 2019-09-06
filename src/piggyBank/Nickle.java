@@ -4,7 +4,7 @@ public class Nickle extends Coin {
     private static double nickle = 0.5;
     private static int count = 0;
 
-    public Nickle {
+    public Nickle() {
         count++;
         System.out.println("1 nickle added for a total of "+ count);
     }
@@ -18,15 +18,15 @@ public class Nickle extends Coin {
         return count;
     }
     @Override
-    public int getTotal(){
+    public double getTotal(){
         return count*nickle;
     }
     @Override
-    public int getValue() {
+    public double getValue() {
         return nickle;
     }
     @Override
-    public void remove(int num) {
+    public void remove(double num) {
         count-=num;
     }
     @Override
